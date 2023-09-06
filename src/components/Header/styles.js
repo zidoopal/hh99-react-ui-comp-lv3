@@ -13,8 +13,7 @@ export const StyledHeader = styled.div`
   .react-logo {
     display: inline-block;
     position: relative;
-    top: 74x;
-    right: 10px;
+    right: 11px;
     width: 25px;
     height: 25px;
     background-image: url('./assets/icon/react-heart.svg');
@@ -31,11 +30,10 @@ export const StyledHeader = styled.div`
 
   h1 {
     color: white;
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     text-align: center;
-    font-size: 2rem;
     margin-top: 30px;
-    letter-spacing: 1.5px;
+    letter-spacing: 1.2px;
   }
 
   display: flex;
