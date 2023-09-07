@@ -59,10 +59,8 @@ const Select = () => {
         </SelectWrapper>
         <h2>Hidden Select</h2>
         <div>
-          <SelectWrapper>
-            <div className="hidden">
-              <CustomSelct options={options} />
-            </div>
+          <SelectWrapper isHidden={true}>
+            <CustomSelct options={options}  />
           </SelectWrapper>
         </div>
       </SelectContainer>
