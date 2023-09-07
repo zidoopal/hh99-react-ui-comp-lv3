@@ -1,14 +1,13 @@
 import { React } from 'react';
 import { useState } from 'react';
 import { IoMdArrowDropdown } from 'react-icons/io';
+
 import {
   SelectContainer,
-  SelctBarSet,
+  SelectWrapper,
   Selectbar,
-  Label,
   Dropdown,
   OptionList,
-  IconWrap,
 } from './styles';
 
 const CustomSelct = ({ options }) => {
@@ -23,17 +22,15 @@ const CustomSelct = ({ options }) => {
 
   return (
     <>
-      <Selectbar onClick={() => setShowOptions(!isShowOptions)}>
-        <Label>{currentValue}</Label>
-        <IconWrap>
-          <IoMdArrowDropdown size="20" color="white" />
-        </IconWrap>
-        <Dropdown show={isShowOptions}>
+      <Selectbar onClick={() => setShowOptions(!isShowOptions)} theme="type2">
+        <label>{currentValue}</label>
+        <IoMdArrowDropdown size="28" style={{ marginRight: '15px' }} />
+        <Dropdown $show={isShowOptions}>
           {options.map((item) => (
             <OptionList
               key={item.id}
               value={item.value}
-              show={isShowOptions}
+              $show={isShowOptions}
               onClick={handleOnChangeSelect}
             >
               {item.value}
@@ -54,17 +51,22 @@ const Select = () => {
   ];
 
   return (
-    <>
-      <h1>Select</h1>
+    <div>
       <SelectContainer>
-        <SelctBarSet>
+        <h2>Select</h2>
+        <SelectWrapper>
           <CustomSelct options={options} />
-          <div className="hidden">
-            <CustomSelct options={options} />
-          </div>
-        </SelctBarSet>
+        </SelectWrapper>
+        <h2>Hidden Select</h2>
+        <div>
+          <SelectWrapper>
+            <div className="hidden">
+              <CustomSelct options={options} />
+            </div>
+          </SelectWrapper>
+        </div>
       </SelectContainer>
-    </>
+    </div>
   );
 };
 

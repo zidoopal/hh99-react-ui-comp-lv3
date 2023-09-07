@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PriceInput, ErrorText } from './styles';
+import { PriceInput, ErrorText, InputContainer } from '../Input/styles';
 import { StyledBtn } from '../Button/styles';
 
 function Input() {
@@ -43,20 +43,28 @@ function Input() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <h1>Input</h1>
-      <label>이름</label>{' '}
-      <input type="text" value={name} onChange={handleNameChange} />
-      <label>가격</label>{' '}
-      <PriceInput
-        type="text"
-        value={price}
-        onChange={handlePriceChange}
-        error={error}
-      />
-      {error && <ErrorText>숫자만 입력해주세요😣</ErrorText>}
-      <StyledBtn type="submit">저장</StyledBtn>
-    </form>
+    <InputContainer>
+      <h2>Input</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="input-set">
+          <label>이름</label>
+          <input type="text" value={name} onChange={handleNameChange} />
+        </div>
+        <div className="input-set">
+          <label>가격</label>
+          <PriceInput
+            type="text"
+            value={price}
+            onChange={handlePriceChange}
+            $error={error} // '$' 접두사로 변경
+          />
+        </div>
+        {error && <ErrorText>숫자만 입력해주세요😣</ErrorText>}
+        <div className="btn">
+          <StyledBtn type="submit">저장</StyledBtn>
+        </div>
+      </form>
+    </InputContainer>
   );
 }
 
