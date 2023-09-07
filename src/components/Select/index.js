@@ -59,10 +59,10 @@ const Select = () => {
         </SelectWrapper>
         <h2>Hidden Select</h2>
         <div>
-          <SelectWrapper>
-            <div className="hidden">
-              <CustomSelct options={options} />
-            </div>
+          <SelectWrapper hidden>
+            {/* <div className="hidden"> */}
+            <CustomSelct options={options} />
+            {/* </div> */}
           </SelectWrapper>
         </div>
       </SelectContainer>
