@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const ModalContainer = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 
   width: 100%;
   height: 240px;
@@ -14,12 +15,8 @@ export const ModalContainer = styled.div`
   margin: 0px auto;
   padding: 30px;
 
-  .modal-btn-set {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 5px;
+  .modal-btn {
+    margin: auto;
   }
 `;
 

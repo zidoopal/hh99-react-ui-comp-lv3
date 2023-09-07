@@ -5,8 +5,6 @@ export const LeftSideContainer = styled.div`
   justify-content: space-evenly;
   flex-direction: column;
   width: 350px;
-
-  z-index: 1;
 `;
 
 export const TransitionDiv = styled.div`

@@ -14,8 +14,8 @@ export const StyledHeader = styled.div`
     display: inline-block;
     position: relative;
     right: 11px;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
     background-image: url('./assets/icon/react-heart.svg');
     background-size: cover;
     background-position: center center;
@@ -30,7 +30,7 @@ export const StyledHeader = styled.div`
 
   h1 {
     color: white;
-    font-size: 2.2rem;
+    font-size: 2.6rem;
     text-align: center;
     margin-top: 30px;
     letter-spacing: 1.2px;
