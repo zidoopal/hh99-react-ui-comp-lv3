@@ -28,13 +28,13 @@ export const SelectWrapper = styled.div`
   display: flex;
   width: 100%;
   height: 120px;
-  /* position: relative; */
 
-  .hidden {
-    height: 100%;
+  ${props => props.isHidden && `
     overflow: hidden;
-  }
+  `}
 `;
+
+
 
 export const Selectbar = styled.div`
   display: flex;
