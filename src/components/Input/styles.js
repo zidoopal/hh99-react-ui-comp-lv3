@@ -14,7 +14,7 @@ export const InputContainer = styled.div`
   margin: 0px auto;
   padding: 30px;
 
-  .input-set {
+  .input__set {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +29,7 @@ export const InputContainer = styled.div`
   input {
     width: 220px;
     margin-left: 20px;
-    margin-bottom: 3px;
+    margin-bottom: 2px;
     padding: 8px;
     border-radius: 5px;
     border: none;
@@ -58,15 +58,12 @@ export const ErrorText = styled.p`
   font-size: 0.8rem;
   display: flex;
   justify-content: center;
-  align-items: center;
   max-height: 0px;
 `;
 
-export const PriceInput = styled.input.attrs((props) => ({
-  type: 'text', // 기본값 설정
-}))`
+export const PriceInput = styled.input.attrs((props) => ({}))`
   ${(props) =>
-    props.$error && // '$' 접두사로 변경
+    props.$error &&
     css`
       animation: ${shakeAnimation} 0.5s;
     `}
