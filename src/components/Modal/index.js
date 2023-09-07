@@ -1,35 +1,36 @@
 import React from 'react';
 import { useState } from 'react';
 import { StyledBtn } from '../Button/styles';
-import { ModalContainer, StyledModal } from '../Modal/styles';
+import CustomModal from '../Modal/CustomModal';
+import { ModalContainer, ModalWrapper, StyledModal } from '../Modal/styles';
 
 const Modal = () => {
   const [OpenSmallBtnModal, setOpenSmallBtnModal] = useState(false);
   const [OpenLargeBtnModal, setOpenLargeBtnModal] = useState(false);
 
   return (
-    <>
-      <h1>Modal</h1>
-      <div>
+    <ModalContainer>
+      <h2>Modal</h2>
+      <div className="modal-btn-set">
         <StyledBtn
           size="small"
           theme="type1"
           onClick={() => setOpenSmallBtnModal(!OpenSmallBtnModal)}
         >
-          open modal
+          open
         </StyledBtn>
         <StyledBtn
           size="large"
           theme="type2"
           onClick={() => setOpenLargeBtnModal(!OpenLargeBtnModal)}
         >
-          open modal
+          open
         </StyledBtn>
       </div>
       <div>
         {OpenSmallBtnModal && (
           <>
-            <ModalContainer>
+            <ModalWrapper>
               <StyledModal>
                 <p>
                   닫기와 확인 버튼 2개가 있고,
@@ -53,32 +54,29 @@ const Modal = () => {
                   </StyledBtn>
                 </div>
               </StyledModal>
-            </ModalContainer>
+            </ModalWrapper>
           </>
         )}
         {OpenLargeBtnModal && (
-          <>
-            <ModalContainer
-              onClick={() => setOpenLargeBtnModal(!OpenLargeBtnModal)}
-            >
-              <StyledModal>
-                <div className="modal-bg"></div>
-                <p>
-                  닫기 버튼 1개가 있고,
-                  <br />
-                  외부 영역을 누르면 모달이 닫혀요.
-                </p>
-                <StyledBtn
-                  onClick={() => setOpenLargeBtnModal(!OpenLargeBtnModal)}
-                >
-                  X
-                </StyledBtn>
-              </StyledModal>
-            </ModalContainer>
-          </>
+          <ModalWrapper
+            onClick={() => setOpenLargeBtnModal(!OpenLargeBtnModal)}
+          >
+            <StyledModal>
+              <p>
+                닫기 버튼 1개가 있고,
+                <br />
+                외부 영역을 누르면 모달이 닫혀요.
+              </p>
+              <StyledBtn
+                onClick={() => setOpenLargeBtnModal(!OpenLargeBtnModal)}
+              >
+                X
+              </StyledBtn>
+            </StyledModal>
+          </ModalWrapper>
         )}
       </div>
-    </>
+    </ModalContainer>
   );
 };
 
