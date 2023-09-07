@@ -61,9 +61,11 @@ export const Dropdown = styled.ul`
   width: 100%;
   height: 160px;
   margin-top: 8px;
+  max-height: ${(props) => (props.$show ? '160px' : '0')};
   /* <SelectOptions/>가 props에 상태에 따라 다르게 보일 수 있도록 
+
   max-height: ${(props) => (props.show ? 'none' : '0')};을 추가 */
-  max-height: ${(props) => (props.$show ? 'none' : '0')};
+  max-height: 60;
   overflow: hidden;
   border-radius: 15px;
   list-style: none;

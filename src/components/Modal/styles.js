@@ -44,7 +44,7 @@ export const StyledModal = styled.div`
   background-color: white;
   border-radius: 20px;
 
-  .btn-set {
+  .modal-btn__set {
     display: flex;
     justify-content: center;
     align-items: center;

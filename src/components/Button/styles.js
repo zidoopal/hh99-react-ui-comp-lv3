@@ -36,31 +36,44 @@ export const StyledBtn = styled.button`
   cursor: pointer;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 
-  width: ${(props) =>
-    props.size === 'large'
-      ? '260px'
-      : props.size === 'medium'
-      ? '170px'
-      : props.size === 'small'
-      ? '100px'
-      : '60px'};
-  height: ${(props) =>
-    props.size === 'large'
-      ? '55px'
-      : props.size === 'medium'
-      ? '50px'
-      : props.size === 'small'
-      ? '45px'
-      : '40px'};
+  width: ${(props) => {
+    switch (props.size) {
+      case 'large':
+        return '260px';
+      case 'medium':
+        return '170px';
+      case 'small':
+        return '100px';
+      case 'xsmall':
+      default:
+        return '60px';
+    }
+  }};
 
-  color: ${(props) =>
-    props.theme === 'type1'
-      ? 'white'
-      : props.theme === 'type2'
-      ? 'white'
-      : props.theme === 'type3'
-      ? 'var(--main-mint)'
-      : 'var(--main-hotpink)'};
+  height: ${(props) => {
+    switch (props.size) {
+      case 'large':
+        return '55px';
+      case 'medium':
+        return '50px';
+      case 'small':
+        return '45px';
+      default:
+        return '40px';
+    }
+  }};
+
+  color: ${(props) => {
+    switch (props.theme) {
+      case 'type1':
+      case 'type2':
+        return 'white';
+      case 'type3':
+        return 'var(--main-mint)';
+      default:
+        return 'var(--main-hotpink)';
+    }
+  }};
 
   background: ${(props) =>
     props.theme === 'type1'
