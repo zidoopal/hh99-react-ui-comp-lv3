@@ -1,5 +1,9 @@
 ## 🚢 항해99 | React Lv.3 과제 - 모달, 버튼을 포함한 웹페이지 연습하기 🎨
-💘 [배포사이트 바로가기](https://hh99-react-ui-comp-lv3-dvoma00m3-zidoopal.vercel.app/)
+💘 [배포사이트 바로가기](https://hh99-react-ui-comp-lv3-dvoma00m3-zidoopal.vercel.app/) <br>
+
+🤸‍♂️페어🤸‍♀️<br>
+소석진 | 지유진<br>
+<br>
 
 ![image](https://github.com/zidoopal/hh99-react-ui-comp-lv3/assets/131226548/0b7a0ead-c9e3-4e3e-a8a9-1c8a02ee55dd)
 
