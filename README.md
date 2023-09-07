@@ -9,7 +9,7 @@
 
 
 
-### 💡 features & Requirement : 구현 기능 & Requirement : 요구 사항
+### 💡 features & Requirement : 구현 기능 & 요구 사항
 ### ✅ Modal
 - 모달 2개를 구현합니다.
     - `취소`, `확인`이 있고, overlay를 클릭했을 때 모달이 닫히지 않는 형태
@@ -26,7 +26,7 @@
     - 일반형식의 input
     - 숫자를 넣었을 때, 3자리 수마다 `콤마 ,`가 찍히는 input
     - form을 구현하고 각 input에 값을 입력하고 `저장` 버튼을 눌렀을 때 <br>
-{name: '아무 텍스트', price: "콤마가 없는 금액"}` 을 `alert`에 표시
+`{name: '아무 텍스트', price: "콤마가 없는 금액"}` 을 `alert`에 표시
 
 ### ✅ Select
 - select 구현
