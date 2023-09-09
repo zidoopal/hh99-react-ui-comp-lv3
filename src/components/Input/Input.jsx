@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { PriceInput, ErrorText, InputContainer } from '../Input/styles';
+import { PriceInput, ErrorText, InputContainer } from './styles';
 import { StyledBtn } from '../Button/styles';
 
 const Input = () => {

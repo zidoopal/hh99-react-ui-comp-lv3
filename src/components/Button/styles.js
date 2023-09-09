@@ -83,9 +83,9 @@ export const StyledBtn = styled.button`
       : 'white'};
 
   border: ${(props) =>
-    props.border === 'type1'
+    props.$border === 'type1'
       ? '4px solid var(--main-mint)'
-      : props.border === 'type2'
+      : props.$border === 'type2'
       ? '4px solid var(--main-hotpink)'
       : 'black'};
 

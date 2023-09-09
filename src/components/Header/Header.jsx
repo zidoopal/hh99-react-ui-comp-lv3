@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyledHeader } from '../Header/styles';
+import { StyledHeader } from './styles';
 import ReactLogo from '../../assets/icon/react-heart.svg';
 
 function Header() {

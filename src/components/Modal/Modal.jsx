@@ -1,5 +1,5 @@
 import { StyledBtn } from '../Button/styles';
-import { ModalWrapper, StyledModal } from '../Modal/styles';
+import { ModalWrapper, StyledModal } from './styles';
 
 const CustomModal = ({ isOpen, onClose, clickOutsideClose, children }) => (
   <>

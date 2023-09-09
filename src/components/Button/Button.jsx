@@ -2,7 +2,7 @@ import React from 'react';
 import { StyledBtn, ButtonContainer } from './styles';
 
 const CustomButton = ({ size, border, theme, onClick, children }) => (
-  <StyledBtn size={size} border={border} theme={theme} onClick={onClick}>
+  <StyledBtn size={size} $border={border} theme={theme} onClick={onClick}>
     {children}
   </StyledBtn>
 );
