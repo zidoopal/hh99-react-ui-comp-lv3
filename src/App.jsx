@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Reset } from 'styled-reset';
-// import GlobalStyles from './GlobalStyles';
 import Header from './components/Header/Header';
 import LeftSide from './Layout/LeftSide/LeftSide';
 import RightSide from './Layout/RightSide/RightSide';
@@ -16,7 +15,6 @@ const App = () => {
       <Header />
       <MainContainer>
         <Reset />
-        {/* <GlobalStyles /> */}
         <LeftSide
           toggleSmallModal={() => setIsSmallModalOpen(!isSmallModalOpen)}
           toggleLargeModal={() => setIsLargeModalOpen(!isLargeModalOpen)}
