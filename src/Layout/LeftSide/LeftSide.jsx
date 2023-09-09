@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../../components/Button/index';
+import Button from '../../components/Button/Button';
 import { LeftSideContainer, TransitionDiv } from './styles';
 import { StyledBtn } from '../../components/Button/styles';
 import { ModalContainer } from '../../components/Modal/styles';

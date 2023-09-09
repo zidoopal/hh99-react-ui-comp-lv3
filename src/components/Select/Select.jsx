@@ -14,7 +14,7 @@ const CustomSelct = ({ options }) => {
   const [isShowOptions, setShowOptions] = useState(false);
   const [currentValue, setCurrentValue] = useState(options[0].value);
 
-  const handleOnChangeSelect = (e) => {
+  const handleToggleDropdown = (e) => {
     setCurrentValue(e.target.innerText);
     // 리스트 선택 후 닫힘
     setShowOptions(false);
@@ -31,7 +31,8 @@ const CustomSelct = ({ options }) => {
               key={item.id}
               value={item.value}
               $show={isShowOptions}
-              onClick={handleOnChangeSelect}
+              // onClick={handleOnChangeSelect}
+              onClick={handleToggleDropdown}
             >
               {item.value}
             </OptionList>
@@ -59,10 +60,8 @@ const Select = () => {
         </SelectWrapper>
         <h2>Hidden Select</h2>
         <div>
-          <SelectWrapper hidden>
-            {/* <div className="hidden"> */}
+          <SelectWrapper>
             <CustomSelct options={options} />
-            {/* </div> */}
           </SelectWrapper>
         </div>
       </SelectContainer>

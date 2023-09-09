@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { Reset } from 'styled-reset';
-import GlobalStyles from './GlobalStyles';
-import Header from './Layout/Header/index';
-import LeftSide from './Layout/LeftSide/index';
-import RightSide from './Layout/RightSide/index';
-import Modal from './components/Modal/index';
+// import GlobalStyles from './GlobalStyles';
+import Header from './components/Header/Header';
+import LeftSide from './Layout/LeftSide/LeftSide';
+import RightSide from './Layout/RightSide/RightSide';
+import Modal from './components/Modal/Modal';
 import styled from 'styled-components';
 
 const App = () => {
@@ -16,7 +16,7 @@ const App = () => {
       <Header />
       <MainContainer>
         <Reset />
-        <GlobalStyles />
+        {/* <GlobalStyles /> */}
         <LeftSide
           toggleSmallModal={() => setIsSmallModalOpen(!isSmallModalOpen)}
           toggleLargeModal={() => setIsLargeModalOpen(!isLargeModalOpen)}
